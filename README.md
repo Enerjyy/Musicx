@@ -1,4 +1,4 @@
-### An ultimate tool or musicians all in one.
+# An ultimate tool or musicians all in one.
 
-## The project is in developing process.
+## The project is in development.
 

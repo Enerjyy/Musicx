@@ -1,6 +1,8 @@
 import './App.css'
-import * as Tone from "tone";
-import { useState } from 'react';
+//import * as Tone from "tone";
+//import { useState } from 'react';
+//import buttonBPM from './features/metronome/components/ButtonBPM.tsx';
+import MetronomeButton from "./features/metronome/components/ButtonBPM.tsx";
 
 
 
@@ -21,6 +23,17 @@ import { useState } from 'react';
 
 
 const App = () => {
+
+
+
+
+    return (<MetronomeButton />)
+
+
+
+
+
+    /*
     const lowPassFilter = new Tone.Filter(800, "lowpass").toDestination();
     Tone.Destination.volume.value = -10;
   const [state, setState] = useState({})
@@ -84,7 +97,7 @@ const App = () => {
         <input type="text" id="FIRSTRATE" />
         <input type="text" id="SECONDRATE" />
       </>
-      )
+      ) */
 }
 
 

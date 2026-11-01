@@ -3,6 +3,7 @@ import './App.css'
 //import { useState } from 'react';
 //import buttonBPM from './features/metronome/components/ButtonBPM.tsx';
 import MetronomeButton from "./features/metronome/components/ButtonBPM.tsx";
+import MetronomeSlider from "./features/metronome/components/SlidebarBPM.tsx";
 
 
 
@@ -27,7 +28,10 @@ const App = () => {
 
 
 
-    return (<MetronomeButton />)
+    return (
+        <MetronomeButton />
+    )
+
 
 
 

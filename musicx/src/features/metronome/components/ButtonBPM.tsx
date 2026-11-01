@@ -1,8 +1,6 @@
-import { useCatSlider } from '../hooks/catOnButton';
 import type {JSX} from "react";
 
-const MetronomeButton = (): JSX.Element => {
-    const {currentImage, toggleSlider} = useCatSlider();
+const MetronomeButton = (currentImage:string, toggleSlider: () => void): JSX.Element => {
     return (<div>
 
 

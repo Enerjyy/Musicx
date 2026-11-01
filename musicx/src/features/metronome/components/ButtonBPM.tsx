@@ -1,6 +1,11 @@
 import type {JSX} from "react";
 
-const MetronomeButton = (currentImage:string, toggleSlider: () => void): JSX.Element => {
+interface MetronomeButtonProps {
+    currentImage: string;
+    toggleSlider: () => void;
+}
+
+const MetronomeButton = ({ currentImage, toggleSlider }: MetronomeButtonProps): JSX.Element => {
     return (<div>
 
 

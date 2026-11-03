@@ -16,7 +16,8 @@ export const useCatSlider = () => {
     const sampleRef = useRef<Tone.Sampler | null>(null);
     const [BPMValue, setBPMValue] = useState<number>(120);
     const [currentBeat, setCurrentBeat] = useState<number>(0);
-    const [totalBeat, setTotalBeat] = useState<number>(6);
+    const [numerator, setNumerator] = useState<number>(4);
+    const [denominator, setDenominator] = useState<number>(4);
 
     useEffect(() => {
 
@@ -44,7 +45,7 @@ export const useCatSlider = () => {
 
 
         if (!isRunning) return;
-        const intervalTime:number = BPMValue > 0 ? 60/BPMValue * 1000 / 2 : 120;
+        const intervalTime:number = BPMValue > 0 ? 60/BPMValue * 4/denominator * 1000 / 2 : 120;
 
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => {
@@ -66,7 +67,7 @@ export const useCatSlider = () => {
                 }
                 if(nextIndex != 1) {
                     setCurrentBeat((prevBeat) => {
-                        const nextBeat = (prevBeat + 1) % totalBeat;
+                        const nextBeat = (prevBeat + 1) % numerator;
 
                         if (nextBeat === 0) {
                             sampleRef.current?.triggerAttackRelease("G1", 0);
@@ -96,7 +97,9 @@ export const useCatSlider = () => {
         BPMValue,
         setBPMValue,
         currentBeat,
-        totalBeat,
-        setTotalBeat,
+        numerator,
+        setNumerator,
+        denominator,
+        setDenominator,
     };
 }
